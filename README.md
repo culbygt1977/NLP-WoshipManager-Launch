@@ -1,2 +1,2 @@
-# Culby-Home
-Culby applications
+# NLP-WorshipManager-Launch
+NLP Worship Manager install repo
