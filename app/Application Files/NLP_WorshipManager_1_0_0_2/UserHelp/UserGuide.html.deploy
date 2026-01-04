@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NLP Worship Manager - User Guide</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1f23;
+            --muted: #57606a;
+            --card: #f6f8fa;
+            --border: #d0d7de;
+            --accent: #0969da;
+            --warn: #d1242f;
+            --ok: #1a7f37;
+            --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            --sans: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--sans);
+            margin: 0;
+            padding: 12px; /* Added padding so text doesn't hit window edge */
+            color: var(--fg);
+            background: var(--bg);
+            line-height: 1.45;
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        header {
+            padding: 20px 18px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--card);
+            margin-bottom: 14px;
+        }
+
+            header h1 {
+                margin: 0 0 6px 0;
+                font-size: 22px;
+            }
+
+            header .meta {
+                color: var(--muted);
+                font-size: 13px;
+            }
+
+        main {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        @media (min-width: 980px) {
+            .layout {
+                grid-template-columns: 310px 1fr;
+                align-items: start;
+            }
+
+            nav {
+                position: sticky;
+                top: 14px;
+            }
+        }
+
+        nav {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #fff;
+            padding: 12px;
+        }
+
+            nav h2 {
+                font-size: 14px;
+                margin: 0 0 8px 0;
+                color: var(--muted);
+                text-transform: uppercase;
+                letter-spacing: .04em;
+            }
+
+            nav a {
+                display: block;
+                padding: 6px 8px;
+                border-radius: 8px;
+                text-decoration: none;
+                color: var(--accent);
+                font-size: 14px;
+            }
+
+                nav a:hover {
+                    background: var(--card);
+                }
+
+        section {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #fff;
+            padding: 14px 14px;
+        }
+
+            section h2 {
+                margin: 0 0 10px 0;
+                font-size: 18px;
+            }
+
+            section h3 {
+                margin: 14px 0 8px 0;
+                font-size: 15px;
+            }
+
+        .callout {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px 12px;
+            margin: 10px 0;
+        }
+
+            .callout strong {
+                display: inline-block;
+                margin-bottom: 4px;
+            }
+
+        .warn {
+            border-color: #ffd8d3;
+            background: #fff5f5;
+        }
+
+        .ok {
+            border-color: #b4f1c6;
+            background: #f0fff4;
+        }
+
+        ul {
+            margin: 8px 0 8px 22px;
+        }
+
+        ol {
+            margin: 8px 0 8px 22px;
+        }
+
+        code {
+            font-family: var(--mono);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1px 5px;
+            font-size: 12px;
+        }
+
+        .kbd {
+            font-family: var(--mono);
+            border: 1px solid var(--border);
+            border-bottom-width: 2px;
+            border-radius: 6px;
+            padding: 1px 6px;
+            background: #fff;
+            font-size: 12px;
+        }
+
+        footer {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 12px;
+            text-align: center;
+            padding: 18px 10px 10px;
+        }
+
+        .small {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        @media (min-width: 680px) {
+            .two-col {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NLP Worship Manager - User Guide</h1>
+        <div class="meta">Version: internal | Last updated: December 27, 2025</div>
+    </header>
+
+    <main class="layout">
+        <nav aria-label="Table of contents">
+            <h2>Contents</h2>
+            <a href="#getting-started">Getting started</a>
+            <a href="#roles">Roles and permissions</a>
+            <a href="#song-library">Song library basics</a>
+            <a href="#song-manager">Song Manager</a>
+            <a href="#service-planner">Service Planner</a>
+            <a href="#printing">Printing</a>
+            <a href="#files">Where files are stored</a>
+            <a href="#best-practices">Best practices</a>
+            <a href="#troubleshooting">Troubleshooting</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="layout" style="grid-template-columns: 1fr; gap: 14px;">
+            <section id="getting-started">
+                <h2>Getting started</h2>
+                <p>
+                    NLP Worship Manager keeps your worship songs organized and helps you plan services
+                    (Sunday AM / Sunday PM / Wednesday / Special) with consistent ordering, categories, and keys.
+                </p>
+
+                <div class="callout ok">
+                    <strong>Recommended first run checklist</strong>
+                    <ul>
+                        <li>Choose your <a href="#roles">Role</a> (Worship Leader or Soundman).</li>
+                        <li>Confirm the Root Folder where your song library lives.</li>
+                        <li>Open <a href="#song-manager">Song Manager</a> and verify your songs appear.</li>
+                        <li>Open <a href="#service-planner">Service Planner</a> and select a service to plan.</li>
+                    </ul>
+                </div>
+
+                <h3>Keyboard shortcuts</h3>
+                <ul>
+                    <li><span class="kbd">F1</span> - Open this User Guide (if enabled by your church setup)</li>
+                    <li><span class="kbd">Ctrl</span> + <span class="kbd">F</span> - Find on this page (in the help window)</li>
+                </ul>
+                <p class="small">
+                    Shortcuts may vary depending on your Windows version and whether your church PC uses a custom kiosk profile.
+                </p>
+            </section>
+
+            <section id="roles">
+                <h2>Roles and permissions</h2>
+                <div class="two-col">
+                    <div class="callout">
+                        <strong>Worship Leader</strong>
+                        <ul>
+                            <li>Edit song text / lyrics</li>
+                            <li>Create, rename, and organize songs</li>
+                            <li>Assign Category and Key for a service plan</li>
+                            <li>Build and print service plans</li>
+                        </ul>
+                    </div>
+                    <div class="callout">
+                        <strong>Soundman</strong>
+                        <ul>
+                            <li>View songs and service plans</li>
+                            <li>Print service plans (if enabled)</li>
+                            <li>Reduce risk of accidental edits during service</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="callout warn">
+                    <strong>If you cannot type in the lyrics box</strong>
+                    <div class="small">
+                        This is almost always caused by the app being in a read-only role.
+                        Switch to Worship Leader and try again. If it still happens, see Troubleshooting.
+                    </div>
+                </div>
+            </section>
+
+            <section id="song-library">
+                <h2>Song library basics</h2>
+                <p>
+                    Songs are stored as files in folders under your configured Root Folder.
+                    The app can read/write a <code>Title:</code> header when present.
+                </p>
+
+                <h3>Typical flow</h3>
+                <ul>
+                    <li><strong>Import</strong> new songs (often from ProPresenter imports) into the library.</li>
+                    <li><strong>Review / cleanup</strong> formatting (spacing, punctuation, headers).</li>
+                    <li><strong>Plan</strong> songs into a service (with order, category, key).</li>
+                    <li><strong>Complete service</strong> to move items out of active planning areas.</li>
+                </ul>
+
+                <div class="callout">
+                    <strong>Service variants</strong>
+                    <div class="small">
+                        Some churches keep special versions of songs for a specific service. These can be marked as service variants
+                        so they are archived differently when a service is completed.
+                    </div>
+                </div>
+            </section>
+
+            <section id="song-manager">
+                <h2>Song Manager</h2>
+                <p>
+                    Song Manager is where you browse, search, edit, and organize the library. It is also where you manage imports,
+                    cleanup, and service-specific variants.
+                </p>
+
+                <h3>Common tasks</h3>
+                <ul>
+                    <li><strong>Search and select a song</strong> to preview its lyrics.</li>
+                    <li><strong>Edit lyrics</strong> (Worship Leader role only).</li>
+                    <li><strong>Cleanup / normalize</strong> song text (remove junk lines, normalize spacing, etc.).</li>
+                    <li><strong>Move songs</strong> between working/import/service folders (depending on your workflow).</li>
+                    <li><strong>Create new songs</strong> and use safe filenames to avoid Windows invalid characters.</li>
+                </ul>
+
+                <h3>Tips for clean lyrics</h3>
+                <ul>
+                    <li>Keep the first line as <code>Title: Song Name</code> when possible.</li>
+                    <li>Use consistent section headers: Verse, Chorus, Bridge (whatever your church standard is).</li>
+                    <li>Remove repeated empty lines; large blocks of whitespace cause poor projection formatting.</li>
+                </ul>
+            </section>
+
+            <section id="service-planner">
+                <h2>Service Planner</h2>
+                <p>
+                    Service Planner shows the songs currently assigned to a service and lets you set the order, category, and key.
+                </p>
+
+                <h3>Plan a service (step-by-step)</h3>
+                <ol>
+                    <li>Select the service: Sunday AM / Sunday PM / Wednesday / Special.</li>
+                    <li>Review the list of songs for that service.</li>
+                    <li>Enter an Order number (ServiceRank) for each song you want in a specific order.</li>
+                    <li>Right-click a song to set its Key and Category.</li>
+                    <li>The plan auto-saves while you work.</li>
+                </ol>
+
+                <h3>Complete Service (bulk move)</h3>
+                <p>
+                    Completing a service processes the songs in the selected service:
+                </p>
+                <ul>
+                    <li>Normal songs are processed to your workflow destination (for example, ProPresenterImports).</li>
+                    <li>Service-variant songs are archived so you do not lose a special version used for a single service.</li>
+                </ul>
+
+                <div class="callout warn">
+                    <strong>Important</strong>
+                    <div class="small">
+                        Complete Service is meant to be used after you are finished with that service plan.
+                        If you are not sure, print the plan first.
+                    </div>
+                </div>
+            </section>
+
+            <section id="printing">
+                <h2>Printing</h2>
+                <p>
+                    Printing generates a clean service-plan page with category headers and larger text for readability.
+                    Use Print Preview first, then print when ready.
+                </p>
+
+                <h3>What prints</h3>
+                <ul>
+                    <li>Service name (Sunday AM / Sunday PM / Wednesday / Special)</li>
+                    <li>Date</li>
+                    <li>Category headers (Worship, Offering, Special, Choral, Other)</li>
+                    <li>Song order + title + key</li>
+                </ul>
+            </section>
+
+            <section id="files">
+                <h2>Where files are stored</h2>
+                <p>
+                    All storage is local file-based. The most important folder for service planning is:
+                </p>
+                <div class="callout">
+                    <strong>Service plans folder</strong><br />
+                    <code>&lt;RootFolder&gt;\ServicePlans\YYYYMMDD_ServiceName.xml</code>
+                    <div class="small" style="margin-top: 6px;">
+                        Example: <code>20251227_SundayAM.xml</code>
+                    </div>
+                </div>
+
+                <h3>Backups</h3>
+                <ul>
+                    <li>Back up the entire Root Folder regularly (Dropbox, OneDrive, external drive, etc.).</li>
+                    <li>If you change PCs, copy the Root Folder to preserve songs and plans.</li>
+                </ul>
+            </section>
+
+            <section id="best-practices">
+                <h2>Best practices</h2>
+                <ul>
+                    <li><strong>Use consistent naming</strong> for song titles and section headers.</li>
+                    <li><strong>Set order numbers</strong> only for songs that must be in a specific sequence.</li>
+                    <li><strong>Print before service</strong> so the team has a non-digital backup.</li>
+                    <li><strong>Assign keys</strong> during rehearsal so the Soundman can prep.</li>
+                    <li><strong>Keep the app in Soundman role</strong> during live service to prevent accidental edits.</li>
+                </ul>
+            </section>
+
+            <section id="troubleshooting">
+                <h2>Troubleshooting</h2>
+
+                <h3>I cannot type in the lyrics editor</h3>
+                <ul>
+                    <li>Check your Role is set to <strong>Worship Leader</strong>.</li>
+                    <li>Click inside the editor and try again.</li>
+                    <li>If it started after an update: close the app and reopen; verify role after startup.</li>
+                </ul>
+
+                <h3>My song is not showing up</h3>
+                <ul>
+                    <li>Confirm the Root Folder is correct.</li>
+                    <li>Refresh the song list.</li>
+                    <li>Verify the song file exists on disk and is not in an unexpected folder.</li>
+                </ul>
+
+                <h3>"Missing songs" when loading a plan</h3>
+                <ul>
+                    <li>The plan refers to songs by file name (and also tries NormalizedTitle as a fallback).</li>
+                    <li>If a file was renamed or deleted, it may show as missing.</li>
+                </ul>
+
+                <h3>Printing is blank / printer not found</h3>
+                <ul>
+                    <li>Try Print Preview first to confirm the document is generated.</li>
+                    <li>Verify Windows can print to the selected printer outside the app.</li>
+                </ul>
+
+                <div class="callout warn">
+                    <strong>If you need more help</strong>
+                    <div class="small">
+                        Your church tech/admin can update this guide and redistribute the app. The guide is stored as a local HTML file.
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq">
+                <h2>FAQ</h2>
+
+                <h3>Do service plans save automatically?</h3>
+                <p class="small">Yes. Service Planner auto-saves after changes (order/key/category) by date+service.</p>
+
+                <h3>Where are plans saved?</h3>
+                <p class="small">Under <code>&lt;RootFolder&gt;\ServicePlans</code> with filenames like <code>YYYYMMDD_SundayAM.xml</code>.</p>
+
+                <h3>What is a "service variant" song?</h3>
+                <p class="small">A special version of a song intended for a specific service; it can be archived differently during Complete Service.</p>
+            </section>
+
+            <footer>
+                NLP Worship Manager - User Guide | 2025-12-27
+            </footer>
+        </div>
+    </main>
+</body>
+</html>
