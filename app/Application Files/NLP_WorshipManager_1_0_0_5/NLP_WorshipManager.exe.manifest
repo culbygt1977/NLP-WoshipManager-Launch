@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="NLP_WorshipManager.exe" version="1.0.0.5" publicKeyToken="113528d8856211a5" language="en" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="app\NLP_WorshipManager_AppIcon_transparent.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="NLP_WorshipManager" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="NLP_WorshipManager.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NLP_WorshipManager.exe" size="538560">
+      <assemblyIdentity name="NLP_WorshipManager" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>VfLeeRbdQQbUDwkLDxnMUqcBjxzos8WGRQaYWdIAEe4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="app\NLP_WorshipManager_AppIcon_transparent.ico" size="106462">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hjd5I7P5u2gJWmyRVK/HBr64MdRZBo3muZHemo9v0WI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="NLP_WorshipManager.exe.config" size="1186">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>l9TctYlD1zWOBkS5wydCYg05rccDGNsyM7lvqeyy9oA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="UserHelp\UserGuide.html" size="17707">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EHPBTZkfALoIjgzEgIJOMw742+kgCVtIYZHadKJmgzE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=CULBY-HOME\culby" issuerKeyHash="f68356fb827170eaba45ef45a9fb1e6935a2af82" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>6ctjf0CMLUbx0cGIu5y0zZh2rdCuY/qyYQ17aco1xH8=</DigestValue></Reference></SignedInfo><SignatureValue>KZJytzGF9a4OD2vlko0s/yQz9cPfFO9CZ5VLFyXwjd7IShCiqxLExy4F97+cQgrGYkUOC/5K0U+8KhegiOwaawOsP5RW7YddPfEfaMsHS5T24Id+nvaB1HSSw+uJDsn+dK3jE6oj66jZj5Jyr3ooLMq7ZkBq043S/aTorSEEIUA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ppDLgjEfq/G1Di+4Xtwn/pJqnSzbtoPBz8zd1YdsM2fmLomkFgtZHDzYshmrurQfw4IE+Yv+/to46uR+cmhXPzsLVIygG5itsn/3HRC4zdbBLpQCqAaMSFBNiRtJueEAnNP7cxPHeDq/m7twhVgTlkfHoQdtPekU5bqIgaJiv40=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7fc435ca697b0d61b2fa63aed0ad7698cdb49cbb88c1d1f1462d8c407f63cbe9" Description="" Url=""><as:assemblyIdentity name="NLP_WorshipManager.exe" version="1.0.0.5" publicKeyToken="113528d8856211a5" language="en" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CULBY-HOME\culby</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>kDmUhfk1+G1+MN9lnZuYxDNSG8CbgXPcNrVj2CuEE4U=</DigestValue></Reference></SignedInfo><SignatureValue>hsctz8rUhxS/yDpDnGlmdVZsoGB2jSOJQpweDmaMxA7Y87FkyLQzDqNpmbRExdX5AUn2U94fvhZSZ+daeN2hOetZIrCHxP2HGCRuWsdi8rz2OSlZXqxV3VkBG7ABIAOdE0rwANS1eAMYQGUsRVaD/eP8adjM8VQo5TyCaoScFnU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ppDLgjEfq/G1Di+4Xtwn/pJqnSzbtoPBz8zd1YdsM2fmLomkFgtZHDzYshmrurQfw4IE+Yv+/to46uR+cmhXPzsLVIygG5itsn/3HRC4zdbBLpQCqAaMSFBNiRtJueEAnNP7cxPHeDq/m7twhVgTlkfHoQdtPekU5bqIgaJiv40=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQIVoVQXen7rFJBuDExmD/7TANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDHiAAQwBVAEwAQgBZAC0ASABPAE0ARQBcAGMAdQBsAGIAeTAeFw0yNTEyMTIyMzQ2MDlaFw0yNjEyMTMwNTQ2MDlaMCsxKTAnBgNVBAMeIABDAFUATABCAFkALQBIAE8ATQBFAFwAYwB1AGwAYgB5MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCmkMuCMR+r8bUOL7he3Cf+kmqdLNu2g8HPzN3Vh2wzZ+YuiaQWC1kcPNiyGau6tB/DggT5i/7+2jjq5H5yaFc/OwtUjKAbmK2yf/cdELjN1sEulAKoBoxIUE2JG0m54QCc0/tzE8d4Or+bu3CFWBOWR8ehB2096RTluoiBomK/jQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBADHSo2aJ7F1SaDoR7RVe9LcmJxglGgOKr/EMGvtwSXaJW44AqjQ8qfbhJObFW2Zg1ivgor3siTWHJbgUEp10p/goxiOrP2fAbcceNPKj7wSDm43wLklss5Lo0HPJ4sHizWWpoGtSCJY9vfESxoMi3kZm1VuON0PiED32wUA2KkGb</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
